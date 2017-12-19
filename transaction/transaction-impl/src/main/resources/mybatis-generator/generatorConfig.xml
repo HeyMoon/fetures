@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+    <context id="mysqlGenerator" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="false" />
+            <property name="suppressDate" value="false"/>
+        </commentGenerator>
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:3306/leaf?useUnicode=true&amp;characterEncoding=utf-8&amp;zeroDateTimeBehavior=convertToNull&amp;allowMultiQueries=true"  userId="root" password="123" />
+        <javaModelGenerator targetPackage="com.dyh.transaction.dao.model" targetProject="src/main/java" />
+        <sqlMapGenerator targetPackage="mybatis" targetProject="src/main/resources" />
+        <javaClientGenerator targetPackage="com.dyh.transaction.dao.mapper" targetProject="src/main/java" type="XMLMAPPER" />
+
+
+        <table tableName="global_transaction_process" domainObjectName="GlobalTransactionProcess"
+            enableDeleteByExample="false" enableCountByExample="false"
+            enableInsert="true" enableUpdateByPrimaryKey="true"
+            enableSelectByExample="false" enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="JDBC" />
+        </table>
+
+        <table tableName="global_transactions" domainObjectName="GlobalTransactions"
+               enableDeleteByExample="false" enableCountByExample="false"
+               enableInsert="true" enableUpdateByPrimaryKey="true"
+               enableSelectByExample="false" enableUpdateByExample="false">
+            <generatedKey column="id" sqlStatement="JDBC" />
+        </table>
+
+    </context>
+</generatorConfiguration>

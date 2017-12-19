@@ -43,9 +43,9 @@
                 <executions>
                     <execution>
                         <phase>package</phase>
-                        <goals>
+                        <!--<goals>
                             <goal>assembly</goal>
-                        </goals>
+                        </goals>-->
                     </execution>
                 </executions>
                 <configuration>
